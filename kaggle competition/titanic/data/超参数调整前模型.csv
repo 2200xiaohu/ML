@@ -1,0 +1,8 @@
+"","model.nottune.overall"
+"Accuracy",0.803571428571429
+"Kappa",0.570731707317073
+"AccuracyLower",0.745420061963182
+"AccuracyUpper",0.8534970738896
+"AccuracyNull",0.625
+"AccuracyPValue",5.70824152552735e-09
+"McnemarPValue",0.174844433610415
