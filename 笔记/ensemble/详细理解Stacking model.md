@@ -28,6 +28,12 @@ All in all ，Stacking一般由两层组成。**第一层**：表现出色的基
 
 
 
+
+
+==注意==：Stacking只能在看的见的数据上进行，是Train，不建议是Valid，但不可以在Test上。因为如果在Valid上表示直接拟合预测的东西，同时我们常常假设的是Test就是我们实际应用中永远未知的那一部分数据，就更加不应该在Test上了
+
+
+
 ## 不同种类的Stacking
 
 在Stacking的实际应用中，有两者Stacking的方法：无cv（交叉验证）和有cv的方法。有cv的方法是无cv方法的一个改进，目的是避免第二层meta-model过拟合的集成第一层的模型。下面，先从最简单的”无cv“ Stacking开始
@@ -180,7 +186,51 @@ b.复杂的：在拟合Train时，也使用Cross-Validation。只是，这时Cro
 
 
 
-## 有关文献
+
+
+# 多层Stacking
+
+中心思想：在第二层再一次拟合第一层的预测数据，最后在进行简单的线性回归输出结果
+
+
+
+结构如图
+
+![image-20230311110803889](https://typora-nigel.oss-cn-nanjing.aliyuncs.com/img/image-20230311110803889.png)
+
+
+
+## 直接Feed
+
+==这是一种非常容易过拟合的方法==
+
+第二层的输入包含两个部分：
+
+1、第一层所有模型的输出
+
+2、原始数据
+
+将这两个部分拼接起来，作为第二层的输入
+
+
+
+
+
+## K-fold
+
+对第一层的模型在数据上做K-fold，最后还是能到与原始输入数据一样大的预测
+
+有一个很重要的区别：在Train上做Stacking是可以这样的，但不可以在Valid上。因为模型不能在Valid上重新进行训练
+
+
+
+## n times k-fold
+
+对第一层模型做n次k-fold，将得到的n次结果做平均，作为第二层的输入
+
+
+
+# 有关文献
 
 Saso Džeroski,Bernard Ženko(2004). Is Combining Classifiers with Stacking Better than Selecting the Best One. *Machine Learning*, 54, 255–273, 2004.
 

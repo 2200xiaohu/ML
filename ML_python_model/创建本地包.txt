@@ -1,0 +1,11 @@
+打包：
+python setup.py sdist    
+
+安装
+pip install C:\Users\nigel\Desktop\ML_git\ML_python_model\package\dist\Smile-0.0.1.tar.gz
+
+只要有__init__.py就是一个包
+
+注意最顶层的__init__.py
+如果想要能一级一级导入，则需要在每一级的__init__.py中添加import + 下一层的包
+因为在import的时候，就是运行__init__.py文件
