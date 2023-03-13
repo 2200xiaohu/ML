@@ -1,1 +1,1 @@
-from Smile.model import Mytree
+from Smile.model import Mymodel

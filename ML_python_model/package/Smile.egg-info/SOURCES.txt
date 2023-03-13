@@ -5,7 +5,8 @@ Smile.egg-info/SOURCES.txt
 Smile.egg-info/dependency_links.txt
 Smile.egg-info/requires.txt
 Smile.egg-info/top_level.txt
-Smile/model/Mytree.py
+Smile/model/Mymodel.py
 Smile/model/__init__.py
 Smile/preprocess/__init__.py
 Smile/preprocess/data_process.py
+dist/Smile-0.0.1.tar.gz
