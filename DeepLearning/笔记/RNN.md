@@ -12,6 +12,24 @@ $$
 
 
 
+# Hidden State和单元数量
+
+==Hidden State：一个单元中参数的维度，可以立即为Layer中的神经元数量==
+
+==单元数量：组成模型的组件，可以理解为Layer==
+
+[不错的博客](https://medium.com/analytics-vidhya/lstms-explained-a-complete-technically-accurate-conceptual-guide-with-keras-2a650327e8f2)
+
+## ChatGPT的解释
+
+LSTM模型中的隐藏层大小和LSTM单元数量并不是同一个概念。在LSTM模型中，隐藏层大小指的是LSTM单元中的隐藏状态向量的维度大小，用来表示当前序列位置的信息。而LSTM单元的数量指的是LSTM模型中LSTM单元的个数，用来决定LSTM模型的深度和复杂度。
+
+具体来说，LSTM模型中的每个LSTM单元都会维护一个隐藏状态向量，用来存储当前序列位置的信息，并根据门控机制和记忆单元的计算更新状态信息。这个隐藏状态向量的维度大小就是LSTM模型的隐藏层大小。而LSTM单元的数量决定了LSTM模型的深度和复杂度，也影响着LSTM模型的表达能力和计算复杂度。
+
+在LSTM模型中，通常会使用多个LSTM单元来构建一个深层的LSTM模型，这些LSTM单元是串行连接的，每个LSTM单元的输出作为下一个LSTM单元的输入。LSTM单元的数量可以决定LSTM模型的深度和复杂度，同时也会影响模型的表达能力和计算复杂度。但是，LSTM模型的隐藏层大小是固定的，与LSTM单元的数量无关，它仅仅影响LSTM单元中的隐藏状态向量的维度大小。
+
+
+
 # GRU
 
 ![image-20230307111032933](C:\Users\nigel\AppData\Roaming\Typora\typora-user-images\image-20230307111032933.png)
