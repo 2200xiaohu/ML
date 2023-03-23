@@ -1,4 +1,6 @@
-# self-attention
+# Attention
+
+## self-attention
 
 ## 基本结构
 
@@ -133,23 +135,11 @@ I 代表输入
 
 ![image-20230318102544774](C:\Users\nigel\AppData\Roaming\Typora\typora-user-images\image-20230318102544774.png)
 
-## Positional Encoding
-
-**作用**：给输入元素添加位置信息
-
-方法：非常简单，就是简单的在输入向量上，加上一个能够表示位置信息的向量$e^{i}$ 
-
-这个向量$e^{i}$ 有很多种方法构建出来，但现在是没有一个标准的。
-
-常用有：
-
-1、sin-cos方法
-
-2、通过网络学习出来
 
 
+## Guide Attention
 
-![image-20230318103116626](C:\Users\nigel\AppData\Roaming\Typora\typora-user-images\image-20230318103116626.png)
+控制Attention 的 训练过程，例如强迫Attention是从左向右计算结果的
 
 
 
@@ -271,6 +261,10 @@ Maksed Multi Head Attention的改变是：
 
 
 
+注意：Masked Multi Head Attention的输入应该是逐渐变长的，所以需要记忆之前输入的数据。同时，在Transformer中使用了一个Trick，对Encoding 输入正确答案，而不是我们预测的结果
+
+
+
 ## Cross attention（连接Decoder和Encoder）
 
 在模型中的位置
@@ -315,5 +309,47 @@ Maksed Multi Head Attention的改变是：
 
 
 
+## Positional Encoding
+
+**作用**：给输入元素添加位置信息
+
+方法：非常简单，就是简单的在输入向量上，加上一个能够表示位置信息的向量$e^{i}$ 
+
+这个向量$e^{i}$ 有很多种方法构建出来，但现在是没有一个标准的。
+
+常用有：
+
+1、sin-cos方法
+
+2、通过网络学习出来
+
+
+
+![image-20230318103116626](C:\Users\nigel\AppData\Roaming\Typora\typora-user-images\image-20230318103116626.png)
+
+
+
+
+
+
+
 # 问题：Decoder每次的输入是怎么样的
+
+## Teacher Forcing
+
+Decoder的输入是到当今循环下，对应长度的正确答案
+
+
+
+问题：那如果是在Test的时候，没有正确答案，那Decoder的输入又是什么？这个问题叫做：exposure bias
+
+答：可能的解决办法：在训练的时候，加一下错误的输入进去
+
+
+
+# 扩展知识
+
+1. Beam Search
+2. Guide Attention
+3. 当你不知道怎么选择loss的时候，用reinforcement learning（RL）硬试一下
 
