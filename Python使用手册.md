@@ -53,3 +53,65 @@ os.walk("Data\\train")
 ## os.listdir(path)
 
 返回path下所有文件的路径
+
+
+
+
+
+# 快速获取字典value最大的key
+
+```
+max(my_dict, key=my_dict.get)
+```
+
+
+
+# 计算可哈希对象出现的次数
+
+```
+counts = collections.Counter(nums)
+```
+
+返回值：是一个字典，统计了每个对象出现的次数
+
+
+
+# Sort（）
+
+```
+arr.sort() #从小到大
+arr.sort(reverse=True)
+```
+
+**直接修改了原对象**
+
+
+
+# Heap
+
+**heapq 只支持创建最小堆，所以要创建最大堆可以用负数**
+
+1、创建堆
+
+```
+heap = []
+```
+
+2、push
+
+```
+ heapq.heappush(heap , num)
+```
+
+3、pop
+
+```
+heapq.heappop(heap , num)
+```
+
+4、先push在pop
+
+```
+heapq.heappushpop(heap,num)
+```
+

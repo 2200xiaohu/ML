@@ -65,3 +65,9 @@ exp_path = paras.exppath
 
 
 
+# Optimize
+
+当需要定制不同层的不同学习率的时候，需要满足
+
+1、传进去参数组不要有空
+
