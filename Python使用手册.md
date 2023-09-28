@@ -79,6 +79,7 @@ counts = collections.Counter(nums)
 # Sort（）
 
 ```
+# 对于List
 arr.sort() #从小到大
 arr.sort(reverse=True)
 ```
@@ -113,5 +114,41 @@ heapq.heappop(heap , num)
 
 ```
 heapq.heappushpop(heap,num)
+```
+
+
+
+
+
+# OJ
+
+```
+if __name__== "__main__":
+    while True:
+        try:
+            b = input().split()
+            b.sort()
+            print(" ".join(b))
+        except:
+            break
+```
+
+
+
+# Queue
+
+```
+from queue import Queue
+
+q = Queue()
+
+#Empty
+q.empty()
+
+# pop
+q.get()
+
+#push
+q.put()
 ```
 
