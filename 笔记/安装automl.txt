@@ -2,3 +2,4 @@ pip install autogluon -i  https://pypi.tuna.tsinghua.edu.cn/simple
  https://mirror.baidu.com/pypi/simple/
 pip install autogluon -i  https://mirrors.aliyun.com/pypi/simple/
 pip install autogluon -i https://mirror.baidu.com/pypi/simple/
+

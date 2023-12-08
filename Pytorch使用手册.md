@@ -71,3 +71,11 @@ exp_path = paras.exppath
 
 1、传进去参数组不要有空
 
+
+
+# DataSet 和 Dataloader
+
+
+
+# forward如何传入两个数据
+
