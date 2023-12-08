@@ -114,3 +114,5 @@ Our final submission included 30 models: 4 * 5 folds + 10 single models = 30 mod
 
 - [BiLSTM](https://www.kaggle.com/competitions/child-mind-institute-detect-sleep-states/discussion/459604)
 
+- [逐步down然后up](https://www.kaggle.com/competitions/child-mind-institute-detect-sleep-states/discussion/459715)
+
